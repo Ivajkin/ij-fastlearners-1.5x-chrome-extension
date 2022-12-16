@@ -30572,7 +30572,14 @@ function n(r) {
                 Da.createElement(
                   "div",
                   { className: zv.descr_title },
-                  "Sign up now to unlock the following:"
+                  "Select Speed:",
+                  Da.createElement(
+                    "ul",
+                    null,
+                    Da.createElement("li", null, "1.5x"),
+                    Da.createElement("li", null, "1x"),
+                    Da.createElement("li", null, "2x")
+                  )
                 ),
                 Da.createElement(
                   "ul",
