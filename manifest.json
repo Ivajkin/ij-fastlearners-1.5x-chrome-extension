@@ -268,7 +268,7 @@
     }
   ],
   "content_security_policy": "default-src 'none'; font-src 'self' data:; img-src * data: blob:; media-src https://d201kpdrh73vuz.cloudfront.net; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src https://auth.FastLearner.com https://assets.FastLearner.com/ https://data.FastLearner.com https://capi.FastLearner.com https://dox.FastLearner.com https://institution.FastLearner.com wss://capi.FastLearner.com https://gnar.FastLearner.com https://f-log-extension.FastLearner.io https://f-log-editor.FastLearner.io https://d27xxe7juh1us6.cloudfront.net https://chipmunk.FastLearner.com https://treatment.FastLearner.com https://gates.FastLearner.com https://goldengate.FastLearner.com https://femetrics.FastLearner.io https://rwsgfy.FastLearner.com ;  report-uri https://f-log-extension.FastLearner.io/logv2; ",
-  "description": "Improve your writing with FastLearner's communication assistance—including fast learning, video speedup, and more.",
+  "description": "Improve your learning with FastLearner's communication assistance—including fast learning, video speedup, and more.",
   "externally_connectable": {
     "matches": [
       "https://*.FastLearner.com/*"
