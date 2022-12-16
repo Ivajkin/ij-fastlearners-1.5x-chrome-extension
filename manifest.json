@@ -1,9 +1,306 @@
 {
-  "name": "IJ x1.5",
-  "version": "1.0",
-  "manifest_version": 3,
+"update_url": "https://clients2.google.com/service/update2/crx",
+
   "background": {
-    "service_worker": "background.js"
+    "scripts": [
+      "src/js/FastLearner-bg.js"
+    ]
   },
-  "action": {}
+  "browser_action": {
+    "default_icon": "src/icon/icon48-chrome.png",
+    "default_popup": "src/popup.html",
+    "default_title": "FastLearner"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "match_about_blank": true,
+      "css": [
+        "src/css/FastLearner-fonts.styles.css"
+      ],
+      "js": [
+        "src/js/FastLearner-check.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "*://outlook.live.com/*",
+        "*://*.outlook.live.com/*",
+        "*://outlook.office.com/*",
+        "*://*.outlook.office.com/*",
+        "*://*.atlassian.net/*",
+        "*://mail.google.com/*",
+        "*://*.mail.google.com/*",
+        "*://quora.com/*",
+        "*://*.quora.com/*",
+        "*://*.slack.com/*",
+        "*://*.blackboard.com/*",
+        "*://*.blogger.com/*",
+        "*://publish.buffer.com/*",
+        "*://*.publish.buffer.com/*",
+        "*://facebook.com/*",
+        "*://*.facebook.com/*",
+        "*://calendar.google.com/*",
+        "*://*.calendar.google.com/*",
+        "*://keep.google.com/*",
+        "*://*.keep.google.com/*",
+        "*://intercom.io/*",
+        "*://*.intercom.io/*",
+        "*://linkedin.com/*",
+        "*://*.linkedin.com/*",
+        "*://medium.com/*",
+        "*://*.medium.com/*",
+        "*://messenger.com/*",
+        "*://*.messenger.com/*",
+        "*://teams.microsoft.com/*",
+        "*://*.teams.microsoft.com/*",
+        "*://translate.google.com/*",
+        "*://*.translate.google.com/*",
+        "*://reddit.com/*",
+        "*://*.reddit.com/*",
+        "*://youtube.com/*",
+        "*://*.youtube.com/*",
+        "*://twitter.com/*",
+        "*://*.twitter.com/*",
+        "*://*.lightning.force.com/*",
+        "*://trello.com/*",
+        "*://*.trello.com/*",
+        "*://upwork.com/*",
+        "*://*.upwork.com/*",
+        "*://web.whatsapp.com/*",
+        "*://*.web.whatsapp.com/*",
+        "*://wix.com/*",
+        "*://*.wix.com/*",
+        "*://wordpress.com/*",
+        "*://*.wordpress.com/*",
+        "*://*.zendesk.com/*",
+        "*://wattpad.com/*",
+        "*://*.wattpad.com/*",
+        "*://onlinechatdashboard.com/*",
+        "*://*.onlinechatdashboard.com/*",
+        "*://wordcounter.net/*",
+        "*://*.wordcounter.net/*",
+        "*://fiverr.com/*",
+        "*://*.fiverr.com/*",
+        "*://educationperfect.com/*",
+        "*://*.educationperfect.com/*",
+        "*://apclassroom.collegeboard.org/*",
+        "*://*.apclassroom.collegeboard.org/*",
+        "*://studio.youtube.com/*",
+        "*://*.studio.youtube.com/*",
+        "*://chat.google.com/*",
+        "*://*.chat.google.com/*",
+        "*://twitch.tv/*",
+        "*://*.twitch.tv/*",
+        "*://papago.naver.com/*",
+        "*://*.papago.naver.com/*",
+        "*://readworks.org/*",
+        "*://*.readworks.org/*",
+        "*://app.nearpod.com/*",
+        "*://*.app.nearpod.com/*",
+        "*://mail.aol.com/*",
+        "*://*.mail.aol.com/*",
+        "*://github.com/*",
+        "*://*.github.com/*",
+        "*://coursera.org/*",
+        "*://*.coursera.org/*",
+        "*://commonlit.org/*",
+        "*://*.commonlit.org/*",
+        "*://classroom.google.com/*",
+        "*://*.classroom.google.com/*",
+        "*://app.seesaw.me/*",
+        "*://*.app.seesaw.me/*",
+        "*://forms.office.com/*",
+        "*://*.forms.office.com/*",
+        "*://docs.google.com/document/*"
+      ],
+      "exclude_globs": [
+        "*docs.google.com*"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "all_frames": true,
+      "match_about_blank": true,
+      "css": [
+        "src/css/FastLearner-fonts.styles.css"
+      ],
+      "js": [
+        "src/js/FastLearner.styles.js",
+        "src/js/FastLearner.js"
+      ],
+      "matches": [
+        "*://*.atlassian.net/*",
+        "*://mail.google.com/*",
+        "*://*.mail.google.com/*",
+        "*://quora.com/*",
+        "*://*.quora.com/*",
+        "*://*.slack.com/*",
+        "*://*.blackboard.com/*",
+        "*://*.blogger.com/*",
+        "*://publish.buffer.com/*",
+        "*://*.publish.buffer.com/*",
+        "*://facebook.com/*",
+        "*://*.facebook.com/*",
+        "*://calendar.google.com/*",
+        "*://*.calendar.google.com/*",
+        "*://keep.google.com/*",
+        "*://*.keep.google.com/*",
+        "*://intercom.io/*",
+        "*://*.intercom.io/*",
+        "*://linkedin.com/*",
+        "*://*.linkedin.com/*",
+        "*://medium.com/*",
+        "*://*.medium.com/*",
+        "*://messenger.com/*",
+        "*://*.messenger.com/*",
+        "*://teams.microsoft.com/*",
+        "*://*.teams.microsoft.com/*",
+        "*://translate.google.com/*",
+        "*://*.translate.google.com/*",
+        "*://reddit.com/*",
+        "*://*.reddit.com/*",
+        "*://youtube.com/*",
+        "*://*.youtube.com/*",
+        "*://twitter.com/*",
+        "*://*.twitter.com/*",
+        "*://*.lightning.force.com/*",
+        "*://trello.com/*",
+        "*://*.trello.com/*",
+        "*://upwork.com/*",
+        "*://*.upwork.com/*",
+        "*://web.whatsapp.com/*",
+        "*://*.web.whatsapp.com/*",
+        "*://wix.com/*",
+        "*://*.wix.com/*",
+        "*://wordpress.com/*",
+        "*://*.wordpress.com/*",
+        "*://*.zendesk.com/*",
+        "*://wattpad.com/*",
+        "*://*.wattpad.com/*",
+        "*://onlinechatdashboard.com/*",
+        "*://*.onlinechatdashboard.com/*",
+        "*://wordcounter.net/*",
+        "*://*.wordcounter.net/*",
+        "*://fiverr.com/*",
+        "*://*.fiverr.com/*",
+        "*://educationperfect.com/*",
+        "*://*.educationperfect.com/*",
+        "*://apclassroom.collegeboard.org/*",
+        "*://*.apclassroom.collegeboard.org/*",
+        "*://studio.youtube.com/*",
+        "*://*.studio.youtube.com/*",
+        "*://chat.google.com/*",
+        "*://*.chat.google.com/*",
+        "*://twitch.tv/*",
+        "*://*.twitch.tv/*",
+        "*://papago.naver.com/*",
+        "*://*.papago.naver.com/*",
+        "*://readworks.org/*",
+        "*://*.readworks.org/*",
+        "*://app.nearpod.com/*",
+        "*://*.app.nearpod.com/*",
+        "*://mail.aol.com/*",
+        "*://*.mail.aol.com/*",
+        "*://github.com/*",
+        "*://*.github.com/*",
+        "*://coursera.org/*",
+        "*://*.coursera.org/*",
+        "*://commonlit.org/*",
+        "*://*.commonlit.org/*",
+        "*://classroom.google.com/*",
+        "*://*.classroom.google.com/*",
+        "*://app.seesaw.me/*",
+        "*://*.app.seesaw.me/*",
+        "*://forms.office.com/*",
+        "*://*.forms.office.com/*"
+      ],
+      "exclude_globs": [
+        "*docs.google.com*"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "all_frames": true,
+      "match_about_blank": false,
+      "css": [
+        "src/css/FastLearner-fonts.styles.css"
+      ],
+      "js": [
+        "src/js/FastLearner.styles.js",
+        "src/js/FastLearner.js"
+      ],
+      "matches": [
+        "*://outlook.live.com/*",
+        "*://*.outlook.live.com/*",
+        "*://outlook.office.com/*",
+        "*://*.outlook.office.com/*"
+      ],
+      "exclude_globs": [
+        "*docs.google.com*"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "all_frames": false,
+      "css": [
+        "src/css/FastLearner-fonts.styles.css"
+      ],
+      "js": [
+        "src/js/FastLearner-gDocs.styles.js",
+        "src/js/FastLearner-gDocs.js"
+      ],
+      "matches": [
+        "*://docs.google.com/document/*"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "all_frames": false,
+      "js": [
+        "src/js/FastLearner-gDocsEarlyInjector.js"
+      ],
+      "matches": [
+        "*://docs.google.com/document/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": "default-src 'none'; font-src 'self' data:; img-src * data: blob:; media-src https://d201kpdrh73vuz.cloudfront.net; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src https://auth.FastLearner.com https://assets.FastLearner.com/ https://data.FastLearner.com https://capi.FastLearner.com https://dox.FastLearner.com https://institution.FastLearner.com wss://capi.FastLearner.com https://gnar.FastLearner.com https://f-log-extension.FastLearner.io https://f-log-editor.FastLearner.io https://d27xxe7juh1us6.cloudfront.net https://chipmunk.FastLearner.com https://treatment.FastLearner.com https://gates.FastLearner.com https://goldengate.FastLearner.com https://femetrics.FastLearner.io https://rwsgfy.FastLearner.com ;  report-uri https://f-log-extension.FastLearner.io/logv2; ",
+  "description": "Improve your writing with FastLearner's communication assistance—including fast learning, video speedup, and more.",
+  "externally_connectable": {
+    "matches": [
+      "https://*.FastLearner.com/*"
+    ]
+  },
+  "icons": {
+    "16": "src/icon/icon16.png",
+    "48": "src/icon/icon48-chrome.png",
+    "128": "src/icon/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "FastLearner: Fast Learner App",
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "notifications",
+    "cookies",
+    "storage"
+  ],
+  "version": "14.1067.0",
+  "web_accessible_resources": [
+    "src/fonts/*.woff",
+    "src/fonts/*.woff2",
+    "src/images/*.png",
+    "src/images/*.svg",
+    "src/images/*.jpg",
+    "src/images/*.gif",
+    "src/js/*.js",
+    "src/css/*.css"
+  ],
+  "storage": {
+    "managed_schema": "src/schema.json"
+  }
 }

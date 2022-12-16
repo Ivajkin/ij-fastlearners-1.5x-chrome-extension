@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "FastLearnerEnrollmentToken": {
+      "description": "By default, FastLearner’s extension is enabled for all users. To disable the extension for all users except those who are logged in to your FastLearner Business account, specify your organization ID in this property.",
+      "type": "string"
+    },
+    "FastLearnerBlockedClients": {
+      "description": "A comma-separated list of blocked clients.",
+      "type": "string"
+    },
+    "FastLearnerBlockedDomains": {
+      "description": "A comma-separated list of blocked domains.",
+      "type": "string"
+    },
+    "FastLearnerConfidentialModeEnabled": {
+      "description": "Enables the confidential mode support for GMail.",
+      "type": "boolean"
+    },
+    "FastLearnerDlpEnabled": {
+      "description": "Enables the data leak/loss prevention capabilities.",
+      "type": "boolean"
+    },
+    "FastLearnerExtensionMode": {
+      "description": "Enables type of extension work with desktop integration full or limited",
+      "type": "string"
+    }
+  }
+}
